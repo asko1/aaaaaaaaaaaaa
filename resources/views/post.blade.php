@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Home Page')
+@section('title', $post->title)
 @section('content')
     <a class="btn btn-primary" href="{{url()->previous()}}">Back</a>
     <div class="card mt-3">

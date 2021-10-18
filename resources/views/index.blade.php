@@ -1,14 +1,7 @@
 @extends('layout')
 @section('title', 'Home Page')
 @section('content')
-    <div>
-        @if($posts->previousPageUrl())
-            <a class="btn btn-primary" href="{{$posts->previousPageUrl()}}">Prev</a>
-        @endif
-        @if($posts->nextPageUrl())
-            <a class="btn btn-primary float-end" href="{{$posts->nextPageUrl()}}">Next</a>
-        @endif
-    </div>
+    {{$posts->links()}}
     <div class="row row-cols-4">
         @foreach($posts as $post)
             <div class="col">
