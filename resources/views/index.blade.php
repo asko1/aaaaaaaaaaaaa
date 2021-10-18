@@ -1,18 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    {!! $array[1] !!}
+@extends('layout')
+@section('title', 'Home Page')
+@section('content')
     <ul>
-        @foreach($array as $value)
-            <li>{{$value}}</li>
+        @foreach($posts as $post)
+            <li>{{$post->title}}</li>
         @endforeach
     </ul>
-</body>
-</html>
+@endsection
