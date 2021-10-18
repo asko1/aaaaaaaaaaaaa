@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/posts/hello', [\App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/posts/{id}', [\App\Http\Controllers\HomeController::class, 'posts']);
+Route::get('/post/{post}', [\App\Http\Controllers\HomeController::class, 'post']);
 
