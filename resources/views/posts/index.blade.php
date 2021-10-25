@@ -1,6 +1,7 @@
 @extends('layout')
 @section('title', 'Posts')
 @section('content')
+    <a href="{{route('admin.posts.create')}}" class="btn btn-primary">New Post</a>
     {{$posts->links()}}
         <table class="table table-striped">
             <thead>

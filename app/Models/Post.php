@@ -15,6 +15,8 @@ class Post extends Model
 
     use HasFactory;
 
+    protected $fillable = ['title', 'body', 'id'];
+
     public function getSnippetAttribute(){
         $paragraphs = explode("\n\n", $this->body);
         return $paragraphs[0];
