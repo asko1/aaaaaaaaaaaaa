@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +16,7 @@ class HomeController extends Controller
         return view('index', compact('posts'));
     }
 
-    public function post(Post $post) {
-        return view('post', compact('post'));
+    public function post(Post $post, Comment $comment) {
+        return view('post', compact('post', 'comment'));
     }
 }

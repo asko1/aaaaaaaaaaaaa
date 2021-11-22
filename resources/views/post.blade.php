@@ -13,4 +13,14 @@
             <p class="card-text">{!! $post->displayBody !!}</p>
         </div>
     </div>
+    <h4>Comments</h4>
+    <a class="btn btn-primary" href="{{ route('comment', ['post'=> $post->id]) }}">New Comment</a>
+    @foreach($post->comments as $comment)
+        <div class="card mt-3">
+            <div class="card-body">
+                <h6>{{ $comment->user->name }}</h6>
+                <p>{{ $comment->displayBody }}</p>
+            </div>
+        </div>
+    @endforeach
 @endsection
